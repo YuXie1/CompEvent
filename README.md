@@ -1,2 +1,2 @@
 # CompEvent
-Our paper 'CompEvent: Complex-valued Event-RGB Fusion for \\Low-light Video Enhancement and Deblurring' has been accepted at AAAI 2026.
+The code for this paper is currently being organized and will be made publicly available soon.
