@@ -180,7 +180,7 @@ Example configuration file:
 
 - `CompEvent/CSFL/options/test/RELED/CompEvent-test.yml`
 
-## Data Organization (Reading Conventions in the Current Code)
+## Data Organization
 
 Since the complete data preparation documentation has not yet been released, the following are the key reading conventions in the current code for preliminary integration:
 
