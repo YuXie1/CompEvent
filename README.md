@@ -26,15 +26,11 @@ Our framework introduces:
 
 By representing RGB features and event features as the **real and imaginary components of complex tensors**, CompEvent enables deep cross-modal interaction throughout the entire restoration pipeline.
 
-<p align="center">
-<img src="figs/framework.png" width="80%">
-</p>
-
 ---
 
 ## Repository Status
 
-⚠️ **Code release in progress**
+**Code release in progress**
 
 The code for this project is currently being cleaned and organized.  
 The full implementation will be released soon.
@@ -53,7 +49,7 @@ Thank you for your interest and patience.
 
 ## Paper
 
-📄 arXiv: https://arxiv.org/abs/2511.14469  
+arXiv: https://arxiv.org/abs/2511.14469  
 
 If you find this work helpful, please consider citing our paper.
 
