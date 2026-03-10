@@ -32,11 +32,11 @@ By representing RGB features and event features as the **real and imaginary comp
 
 Current release:
 
+- [x] Paper and project description
 - [x] Training code
 - [x] Inference scripts
 - [ ] Pretrained models
-- [ ] Dataset preparation scripts
-- [ ] Additional documentation
+- [ ] Dataset preparation instructions
 
 The repository will be updated with more components and detailed instructions.
 
