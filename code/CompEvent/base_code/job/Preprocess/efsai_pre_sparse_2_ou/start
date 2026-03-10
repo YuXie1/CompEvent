@@ -1,0 +1,5 @@
+#!/bin/bash
+workdir=$(cd $(dirname $0); pwd)
+cd ${workdir}
+pwd
+./run_preprocess.sh

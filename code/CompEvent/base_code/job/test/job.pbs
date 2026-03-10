@@ -1,0 +1,15 @@
+#PBS    -N  RCANx2_EvInt
+#PBS    -o  /ghome/caocz/code/Event_Camera/Event_SR/PAN/codes/job/RCANx2_EvInt/out.out
+#PBS    -e  /ghome/caocz/code/Event_Camera/Event_SR/PAN/codes/job/RCANx2_EvInt/err.err
+#PBS    -l  nodes=1:gpus=1:s
+#PBS    -r  y
+cd $PBS_O_WORKDIR
+echo Time is `date`
+echo Job name is ${PBS_JOBNAME}
+echo Directory is $PWD
+echo CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES}
+echo This job runs on following nodes:
+cat $PBS_NODEFILE
+cat $PBS_GPUFILE
+
+startdocker -D /gdata/linrj/ -P /ghome/linrj/ -u "-v /gdata1/linrj/:/gdata1/linrj/ -e PYTHONPATH=/gdata/linrj/pylib --shm-size=8gb" -c "/ghome/linrj/XSY_NM/EF-SAI/job/EF_SAI/start" bit:5000/caocz_py36_torch1.7

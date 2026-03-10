@@ -1,0 +1,6 @@
+#!/bin/bash
+workdir=$(cd $(dirname $0); pwd)
+cd ${workdir}
+pwd
+cd ../..
+python train.py -opt options/train_EFSAI/train_EFSAI_alldata128_lr1e-3.yml
