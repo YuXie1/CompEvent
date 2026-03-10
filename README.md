@@ -30,20 +30,15 @@ By representing RGB features and event features as the **real and imaginary comp
 
 ## Repository Status
 
-**Code release in progress**
+Current release:
 
-The code for this project is currently being cleaned and organized.  
-The full implementation will be released soon.
+- [x] Training code
+- [x] Inference scripts
+- [ ] Pretrained models
+- [ ] Dataset preparation scripts
+- [ ] Additional documentation
 
-Planned releases include:
-
-- Paper and project description
-- Training code
-- Inference scripts
-- Pretrained models
-- Dataset preparation instructions
-
-Thank you for your interest and patience.
+The repository will be updated with more components and detailed instructions.
 
 ---
 
