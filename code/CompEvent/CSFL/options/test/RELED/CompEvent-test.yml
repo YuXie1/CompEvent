@@ -1,0 +1,65 @@
+name: CompEvent_RELED_test
+model_type: ModelManager
+scale: 1
+num_gpu: 1 
+manual_seed: 100
+dist: false  
+
+inference:
+  mode: tile
+  tile_size: 640  
+  overlap: 64  
+  input_dir: /data/Clivia/RELED/test  
+  output_dir: /output/
+  # weight: 
+  gpu: 0  
+
+datasets:
+  test:
+    name: RELED-full-test
+    type: Test_Video_Dataset  
+    num_test_video_frames: 3
+    dataroot: /data/Clivia/RELED/test  
+    crop_size: ~  
+    use_flip: false  
+
+    use_shuffle: false  
+    num_worker_per_gpu: 1
+    batch_size_per_gpu: 1  
+    dataset_enlarge_ratio: 1  
+    prefetch_mode: cpu
+    num_prefetch_queue: 2
+
+    io_backend:
+      type: disk
+
+    mean: [0.5, 0.5, 0.5]  
+    std: [0.5, 0.5, 0.5]   
+    norm_voxel: true
+
+dataset_name: RELED
+
+network_g:
+  type: CompEvent_l
+
+path:
+  root: /output/
+  # pretrain_network_g: 
+  strict_load_g: true
+  resume_state: ~
+
+val:
+  save_img: true
+  grids: ~  
+  crop_size: ~  
+  crop_border: 0  
+
+  metrics:
+    psnr:
+      type: calculate_psnr
+    ssim:
+      type: calculate_ssim
+
+dist_params:
+  backend: nccl
+  port: 29500 
